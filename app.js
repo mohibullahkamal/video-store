@@ -1,25 +1,28 @@
-//**************** HTTP MODULE ****************
-//**********************************************
-const http = require('http');
-const server = http.createServer((req, res) => {
-    if (req.url === '/') {
-        res.write('Hello World');
-        res.end();
-        console.log('Home site visited... ')
-    }
+// // *********************************************
+// // **************** HTTP MODULE ****************
+// // **********************************************
 
-    if (req.url === '/api/courses') {
-        res.write(JSON.stringify([1, 2, 3]));
-        res.end();
-        console.log('api/courses visited... ')
-    }
-});
+// //**********************************************
+// // **** IN REAL world we will use EXPRESS that comes with NodeJS... req, req connection established on port 3000 ****
+// const http = require('http');
+// const server = http.createServer((req, res) => {
+//     if (req.url === '/') {
+//         res.write('Hello World');
+//         res.end();
+//         console.log('Home site visited... ')
+//     }
 
-server.listen(3000);
-console.log('Listening on port 3000... ');
+//     if (req.url === '/api/courses') {
+//         res.write(JSON.stringify([1, 2, 3]));
+//         res.end();
+//         console.log('api/courses visited... ')
+//     }
+// });
 
+// server.listen(3000);
+// console.log('Listening on port 3000... ');
 
-
+// //**********************************************
 // // **** Simple localhost connection setup - look above for more advanced ****
 // var visits = 0;   // no. of visits... lol 
 // // create localhost connection... 
@@ -32,12 +35,9 @@ console.log('Listening on port 3000... ');
 // console.log('Listening on port 3000... ');
 
 
-
-
-
-
-// //**************** EVENT MODULE ****************
-// //**********************************************
+// // *********************************************
+// // *************** EVENT MODULE ****************
+// // *********************************************
 // const EventEmitter = require('events');  // 'events' is a class with lots of other methods therefore we initialize it with capital letter and camel case
 // const Logger = require('./logger');
 // const logger = new Logger();  // create new instance
@@ -48,4 +48,3 @@ console.log('Listening on port 3000... ');
 // });
 
 // logger.log('message');
-
