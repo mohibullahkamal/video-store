@@ -1,7 +1,7 @@
 {
   "name": "mohibullahkamal",
-  "version": "1.0.0",
-  "description": "My first npm package",
+  "version": "1.0.1",
+  "description": "Simple library to add two numbers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
