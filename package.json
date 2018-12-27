@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/mohibullahkamal/node-project#readme",
   "dependencies": {
-    "mongoose": "^5.4.0",
+    "mongoose": "^5.4.1",
     "underscore": "^1.9.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jshint": "^2.9.7"
+  }
 }
