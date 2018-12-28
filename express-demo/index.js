@@ -1,4 +1,5 @@
 const express = require('express');
+const Joi = require('joi');   // makes input validation easy...
 const app = express();
 
 app.use(express.json());   // allows for Json parsing... not set by default by express... we need it to parse the request below... here-->  "name: req.body.name"
@@ -54,8 +55,23 @@ const courses = [
 //     res.send(course);    //else just send(course)
 // });
 
-// This is Post request... I had to set app.get(express.json) .... above.. 
+// // This is Post request... I had to set app.get(express.json) .... above.. 
+// app.post('/api/courses', (req, res) => {
+//     const course = {
+//         id: courses.length + 1,   // we add 1 simple
+//         name: req.body.name   // we use -> app.use(express.json()) parsing above... 
+//     };
+//     courses.push(course);   // we push the newly added course object... 
+//     res.send(course);   // convention that db notifies to which id was added... 
+// });
+
+// we set input validator... copy of above... plus the input validator... 
 app.post('/api/courses', (req, res) => {
+    if (!req.body.name || req.body.name.length < 3) {   // never trust data sent from client... 
+        // 400 Bad Request... 
+        res.status(400).send('Name is required and should be more than 3 characters.');
+        return;
+    }
     const course = {
         id: courses.length + 1,   // we add 1 simple
         name: req.body.name   // we use -> app.use(express.json()) parsing above... 
