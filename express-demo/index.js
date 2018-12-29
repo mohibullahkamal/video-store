@@ -1,5 +1,5 @@
-const express = require('express');
 const Joi = require('joi');   // makes input validation easy...
+const express = require('express');
 const app = express();
 
 app.use(express.json());   // allows for Json parsing... not set by default by express... we need it to parse the request below... here-->  "name: req.body.name"
@@ -67,6 +67,13 @@ const courses = [
 
 // we set input validator... copy of above... plus the input validator... 
 app.post('/api/courses', (req, res) => {
+    // we define schema of our object...
+    const schema = {
+        name: Joi.string().min(3).required()
+    }
+
+    Joi.validate(req.body, schema);
+
     if (!req.body.name || req.body.name.length < 3) {   // never trust data sent from client... 
         // 400 Bad Request... 
         res.status(400).send('Name is required and should be more than 3 characters.');
@@ -86,5 +93,5 @@ app.post('/api/courses', (req, res) => {
 // PORT - it is unlikely that our hosting port will be 3000... therefore to set it dynamically we use this process.env method... 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {   // we set a listener... 
-    console.log(`Listening on PORT ${port}... `);
+    console.log(`Listening on PORT ${port}...`);
 });
