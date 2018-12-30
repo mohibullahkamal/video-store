@@ -13,7 +13,7 @@ const courses = [
     { id: 5, name: 'course5' },
 ];
 
-//******************************* */
+// //******************************* */
 // let homeCount = 1;
 // app.get('/', (req, res) => {   // This is how we define a route... we specify the url/path and then a callback function also called a route handler... 
 //     res.send('Hello From Home...');
@@ -33,7 +33,7 @@ const courses = [
 //     res.send(req.params.id);   // you basically can read the url id... just imagine what power it gives you... 
 // });
 
-//******************************* */
+// //******************************* */
 // // now look at this... we can basically provide all info in url... cool... /api/posts/2018/February...
 // app.get('/api/posts/:year/:month', (req, res) => {
 //     res.send(req.params);
@@ -49,7 +49,7 @@ const courses = [
 //     res.send(courses);
 // });
 
-//******************************* */
+// //******************************* */
 // // Lets now set id for courses to get... a bit complicated though... Naaa its easy... 
 // app.get('/api/courses/:id', (req, res) => {
 //     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
@@ -67,30 +67,45 @@ const courses = [
 //     res.send(course);   // convention that db notifies to which id was added... 
 // });
 
+// //******************************* */
+// // we set input validator... copy of above... plus the input validator... 
+// app.post('/api/courses', (req, res) => {
+//     // ***We define JOI Schema for our object... a Schema defines the shape of our Object -> what type, props, etc we will use... 
+//     const schema = {
+//         name: Joi.string().min(3).required()   // We are telling JOI that this a string, minimum 3 chars, and required means must be entered by user... 
+//     };
+
+//     const result = Joi.validate(req.body, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
+//     if (result.error) {   // never trust data sent from client... 
+//         // 400 Bad Request... 
+//         res.status(400).send(result.error.details[0].message);
+//         return;   // return because we no longer want the rest of the function to be ececuted... 
+//     }
+
+//     const course = {
+//         id: courses.length + 1,   // we add 1 simple
+//         name: req.body.name   // we use -> app.use(express.json()) parsing above... 
+//     };
+//     courses.push(course);   // we push the newly added course object... 
+//     res.send(course);   // convention that db notifies to which id was added... 
+// });
+
 //******************************* */
-// we set input validator... copy of above... plus the input validator... 
-app.post('/api/courses', (req, res) => {
-    // ***We define JOI Schema for our object... a Schema defines the shape of our Object -> what type, props, etc we will use... 
-    const schema = {
-        name: Joi.string().min(3).required()   // We are telling JOI that this a string, minimum 3 chars, and required means must be entered by user... 
-    };
+// lets now add PUT request... 
+app.put('/app/courses/:id', (req, res) => {
+    // Look up the course
+    // If not existing, return 404
 
-    const result = Joi.validate(req.body, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
-    console.log(result);   // for this demo, lets just log it in console for reference... 
+    // Validate
+    // If invalid, return 400 - Bad request
 
-    if (!req.body.name || req.body.name.length < 3) {   // never trust data sent from client... 
-        // 400 Bad Request... 
-        res.status(400).send('Name is required and should be more than 3 characters.');
-        return;
-    }
-    const course = {
-        id: courses.length + 1,   // we add 1 simple
-        name: req.body.name   // we use -> app.use(express.json()) parsing above... 
-    };
-    courses.push(course);   // we push the newly added course object... 
-    res.send(course);   // convention that db notifies to which id was added... 
+    // Update course
+    // Return the updated course to the client
+
 });
 
+//******************************* */
+//******************************* */
 
 
 
