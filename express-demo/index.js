@@ -14,8 +14,8 @@ const courses = [
 ];
 
 
-// //******************************* */
-// //******************************* */
+// //************************************************************** */
+// //************************************************************** */
 // let homeCount = 1;
 // app.get('/', (req, res) => {   // This is how we define a route... we specify the url/path and then a callback function also called a route handler... 
 //     res.send('Hello From Home...');
@@ -36,8 +36,8 @@ const courses = [
 // });
 
 
-// //******************************* */
-// //******************************* */
+// //************************************************************** */
+// //************************************************************** */
 // // now look at this... we can basically provide all info in url... cool... /api/posts/2018/February...
 // app.get('/api/posts/:year/:month', (req, res) => {
 //     res.send(req.params);
@@ -48,14 +48,14 @@ const courses = [
 //     res.send(req.query);   // Now our app can read query from url... eg: http://localhost:3000/api/posts/3000/March?sortBy=name  ... in this case {sortBy: "name"}
 // });
 
-// // Now after setting the courses array above... lets get all courses...
-// app.get('/api/courses', (req, res) => {
-//     res.send(courses);
-// });
+// Now after setting the courses array above... lets get all courses...
+app.get('/api/courses', (req, res) => {
+    res.send(courses);
+});
 
 
-// //******************************* */
-// //******************************* */
+// //************************************************************** */
+// //************************************************************** */
 // // Lets now set id for courses to get... a bit complicated though... Naaa its easy... 
 // app.get('/api/courses/:id', (req, res) => {
 //     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
@@ -74,47 +74,48 @@ const courses = [
 // });
 
 
-// //******************************* */
-// //******************************* */
-// // we set input validator... copy of above... plus the input validator... 
-// app.post('/api/courses', (req, res) => {
+//************************************************************** */
+//************************************************************** */
+// we set input validator... copy of above... plus the input validator... 
+app.post('/api/courses', (req, res) => {
+    const { error } = validateCourse(req.body);   //stands for 'result.error' above ... Object destructuring used... 
+    if (error) {   // never trust data sent from client...     // if (result.error) {   // never trust data sent from client... 
+        res.status(400).send(error.details[0].message);   // 400 Bad Request...
+        return;   // return because we no longer want the rest of the function to be ececuted... 
+    }
+
+    const course = {
+        id: courses.length + 1,   // we add 1 simple
+        name: req.body.name   // we use -> app.use(express.json()) parsing above... 
+    };
+    courses.push(course);   // we push the newly added course object... 
+    res.send(course);   // convention that db notifies to which id was added... 
+});
+
+// function validateCourse(course) {
 //     // ***We define JOI Schema for our object... a Schema defines the shape of our Object -> what type, props, etc we will use... 
 //     const schema = {
 //         name: Joi.string().min(3).required()   // We are telling JOI that this a string, minimum 3 chars, and required means must be entered by user... 
 //     };
-
-//     const result = Joi.validate(req.body, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
-//     if (result.error) {   // never trust data sent from client... 
-//         // 400 Bad Request... 
-//         res.status(400).send(result.error.details[0].message);
-//         return;   // return because we no longer want the rest of the function to be ececuted... 
-//     }
-
-//     const course = {
-//         id: courses.length + 1,   // we add 1 simple
-//         name: req.body.name   // we use -> app.use(express.json()) parsing above... 
-//     };
-//     courses.push(course);   // we push the newly added course object... 
-//     res.send(course);   // convention that db notifies to which id was added... 
-// });
+//     return Joi.validate(course, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
+// }
 
 
-//******************************* */
-//******************************* */
+//************************************************************** */
+//************************************************************** */
 // lets now add PUT request... 3 Steps below...
-app.put('/app/courses/:id', (req, res) => {
+app.put('/api/courses/:id', (req, res) => {
     // Step 1. Look up the course
     // If not existing, return 404 ---> remember previous the get request where we parseInt to get data... Look above in GET request... 
     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
     if (!course) res.status(404).send('The course with the given ID was not found... ');    // check for error... blablabla.send .... always have a .send
-    res.send(course);    //else just send(course)
 
     // Step 2. Validate; 
     // If invalid, return 400 - Bad request ---> COPY CODE from above in validation section
-    const result = validateCourse(req.body);
-    if (result.error) {   // never trust data sent from client... 
-        // 400 Bad Request... 
-        res.status(400).send(result.error.details[0].message);
+    // const result = validateCourse(req.body);   // below '{error}' same but object destructuring used... to shorten code... 
+    const { error } = validateCourse(req.body);   //stands for 'result.error' above ... Object destructuring used... 
+    if (error) {   // never trust data sent from client...     // if (result.error) {   // never trust data sent from client... 
+        res.status(400).send(error.details[0].message);   // 400 Bad Request...
         return;   // return because we no longer want the rest of the function to be ececuted... 
     }
 
@@ -133,10 +134,10 @@ function validateCourse(course) {
 }
 
 
-//******************************* */
-//******************************* */
-//******************************* */
-//******************************* */
+//************************************************************** */
+//************************************************************** */
+//************************************************************** */
+//************************************************************** */
 
 
 
