@@ -136,6 +136,22 @@ function validateCourse(course) {
 
 //************************************************************** */
 //************************************************************** */
+// DELETE request... in 3 steps... 
+app.delete('/api/courses/:id', (req, res) => {
+    // Step 1. Look up the course ---> seams like I have written this code above... CopyPaste...LOL
+    // Not existing, return 404
+    const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
+    if (!course) res.status(404).send('The course with the given ID was not found... ');    // check for error... blablabla.send .... always have a .send
+
+    // Step 2. Delete
+    const index = courses.indexOf(course);
+    courses.splice(index, 1);   // delete one entry... 
+
+    // Step 3. Return the same course
+    res.send(course);
+});
+
+
 //************************************************************** */
 //************************************************************** */
 
