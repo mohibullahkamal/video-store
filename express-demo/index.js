@@ -13,6 +13,8 @@ const courses = [
     { id: 5, name: 'course5' },
 ];
 
+
+// //******************************* */
 // //******************************* */
 // let homeCount = 1;
 // app.get('/', (req, res) => {   // This is how we define a route... we specify the url/path and then a callback function also called a route handler... 
@@ -33,6 +35,8 @@ const courses = [
 //     res.send(req.params.id);   // you basically can read the url id... just imagine what power it gives you... 
 // });
 
+
+// //******************************* */
 // //******************************* */
 // // now look at this... we can basically provide all info in url... cool... /api/posts/2018/February...
 // app.get('/api/posts/:year/:month', (req, res) => {
@@ -49,6 +53,8 @@ const courses = [
 //     res.send(courses);
 // });
 
+
+// //******************************* */
 // //******************************* */
 // // Lets now set id for courses to get... a bit complicated though... Naaa its easy... 
 // app.get('/api/courses/:id', (req, res) => {
@@ -67,6 +73,8 @@ const courses = [
 //     res.send(course);   // convention that db notifies to which id was added... 
 // });
 
+
+// //******************************* */
 // //******************************* */
 // // we set input validator... copy of above... plus the input validator... 
 // app.post('/api/courses', (req, res) => {
@@ -90,20 +98,43 @@ const courses = [
 //     res.send(course);   // convention that db notifies to which id was added... 
 // });
 
+
 //******************************* */
-// lets now add PUT request... 
+//******************************* */
+// lets now add PUT request... 3 Steps below...
 app.put('/app/courses/:id', (req, res) => {
-    // Look up the course
-    // If not existing, return 404
+    // Step 1. Look up the course
+    // If not existing, return 404 ---> remember previous the get request where we parseInt to get data... Look above in GET request... 
+    const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
+    if (!course) res.status(404).send('The course with the given ID was not found... ');    // check for error... blablabla.send .... always have a .send
+    res.send(course);    //else just send(course)
 
-    // Validate
-    // If invalid, return 400 - Bad request
+    // Step 2. Validate; 
+    // If invalid, return 400 - Bad request ---> COPY CODE from above in validation section
+    const result = validateCourse(req.body);
+    if (result.error) {   // never trust data sent from client... 
+        // 400 Bad Request... 
+        res.status(400).send(result.error.details[0].message);
+        return;   // return because we no longer want the rest of the function to be ececuted... 
+    }
 
-    // Update course
+    // Step 3. Update course
     // Return the updated course to the client
-
+    course.name = req.body.name;
+    res.send(course);   // return updated course to client... 
 });
 
+function validateCourse(course) {
+    // ***We define JOI Schema for our object... a Schema defines the shape of our Object -> what type, props, etc we will use... 
+    const schema = {
+        name: Joi.string().min(3).required()   // We are telling JOI that this a string, minimum 3 chars, and required means must be entered by user... 
+    };
+    return Joi.validate(course, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
+}
+
+
+//******************************* */
+//******************************* */
 //******************************* */
 //******************************* */
 
