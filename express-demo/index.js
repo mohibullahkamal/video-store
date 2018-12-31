@@ -1,12 +1,11 @@
 const Joi = require('joi');   // makes input validation easy...
-const log = require('./logger');   // Middleware function remember... express is nothing but Technically a bunch of middleware functions lol... 
+const log = require('./logger');   // custom Middleware function remember... express is nothing but Technically a bunch of middleware functions lol... 
+const auth = require('./authenticator');   // custom Middleware function to authenticate user... 
 const express = require('express');
 const app = express();
 
 app.use(express.json());   // allows for Json parsing... not set by default by express... we need it to parse the request below... here-->  "name: req.body.name"
-
 app.use(log);
-
 app.use(auth);
 
 
