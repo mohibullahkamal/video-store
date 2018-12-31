@@ -1,3 +1,4 @@
+const config = require('config');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const Joi = require('joi');   // makes input validation easy...
@@ -12,18 +13,26 @@ console.log(`NODE_ENV: ${process.env.NODE_ENV}`);   // set to "undefined" by def
 console.log(`app: ${app.get('env')}`);   // gets environment... set to "development" by default... 
 
 
-// All Middlewares... both built-in and custom... 
+// All MIDDLEWARES... all types include --> built-in, 3rd Party, and custom... 
 app.use(express.json());   // allows for Json parsing... not set by default by express... we need it to parse the request below... here-->  "name: req.body.name"
 app.use(express.urlencoded({ extended: true }));   // another middleware function... this middleware function parses incoming req with url encoded payloads... "key=value&key=value"... with the extended part we can pass arrays and complex objects... 
 app.use(express.static('public'));   // the last build-in middleware function we have in Express is "static"... we use this to serve static files... we use the folder "public" and put in static files like ".css", "images", and so on...
 app.use(logger);   // custom middleware... see logger.js
 app.use(authenticator);   // custom middleware... see authenticator.js
 app.use(helmet());   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> Helmet helps you secure your Express apps by setting various HTTP headers.
+
+
+// CONFIGURATION ---> goes hand-in-hand with Environment... remember we used morgan('tiny')... to get env info...
+console.log('Application Name: ' + );
+
+
+// *** 3rd Party middleware for Express.... see also helmet above... 
 // app.use(morgan('tiny'));   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> HTTP request logger middleware for node.js
 if (app.get('env') === 'development') {   // if on ENV equals 'development' then run morgan... we can set 'env' to any thing LOL... just type in commandLine--> "export NODE_ENV=development"
     app.use(morgan('tiny'));
     console.log('Morgan enabled...');
 }
+
 
 // our data set array... 
 const courses = [
