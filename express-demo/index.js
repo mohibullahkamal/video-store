@@ -20,7 +20,7 @@ app.use(logger);   // custom middleware... see logger.js
 app.use(authenticator);   // custom middleware... see authenticator.js
 app.use(helmet());   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> Helmet helps you secure your Express apps by setting various HTTP headers.
 // app.use(morgan('tiny'));   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> HTTP request logger middleware for node.js
-if (app.get('env') === 'development') {   // if on ENV equals 'development' then run morgan... 
+if (app.get('env') === 'development') {   // if on ENV equals 'development' then run morgan... we can set 'env' to any thing LOL... just type in commandLine--> "export NODE_ENV=development"
     app.use(morgan('tiny'));
     console.log('Morgan enabled...');
 }
