@@ -23,7 +23,8 @@ app.use(helmet());   // this is 3rd party middleware for Express... see how we u
 
 
 // CONFIGURATION ---> goes hand-in-hand with Environment... remember we used morgan('tiny')... to get env info...
-console.log('Application Name: ' + );
+console.log('Application Name: ' + config.get('name'));
+console.log('Mail Server: ' + config.get('name'));
 
 
 // *** 3rd Party middleware for Express.... see also helmet above... 
