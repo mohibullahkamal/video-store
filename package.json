@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mohibullahkamal/node-project#readme",
   "dependencies": {
+    "debug": "^4.1.1",
     "mongoose": "^5.4.1",
     "underscore": "^1.9.1"
   },
