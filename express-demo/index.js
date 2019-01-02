@@ -1,3 +1,5 @@
+const startupDebugger = require('debug')('app:startup');   // this require command returns a function, we call this function and give it an argument... this argument is an arbitrary namespace that we define for debugging... awesome... 
+const dbDebugger = require('debug')('app:db');   // we can have another debugger to debug database related messages... this will return a debugging function ... 
 const config = require('config');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -27,12 +29,21 @@ console.log('Application Name: ' + config.get('name'));   // uses config npm pac
 console.log('Mail Server: ' + config.get('mail.host'));   // we will access the .json file and go into mail.host object
 console.log('Mail Password: ' + config.get('mail.password'));   // we are getting password from "custom-environment-variables.json" file... This command looks at various sources to find value for this "mail.password" configuration... it could be a config file, a json file, an env variable, or command line argument [what the heeeeellll...awesome!!]... 
 
-// *** 3rd Party middleware for Express.... see also helmet above... 
-// app.use(morgan('tiny'));   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> HTTP request logger middleware for node.js
-if (app.get('env') === 'development') {   // if on ENV equals 'development' then run morgan... we can set 'env' to any thing LOL... just type in commandLine--> "export NODE_ENV=development"
+// // *** 3rd Party middleware for Express.... see also helmet above... 
+// // app.use(morgan('tiny'));   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> HTTP request logger middleware for node.js
+// if (app.get('env') === 'development') {   // if on ENV equals 'development' then run morgan... we can set 'env' to any thing LOL... just type in commandLine--> "export NODE_ENV=development"
+//     app.use(morgan('tiny'));
+//     console.log('Morgan enabled...');
+// }
+
+
+// DEBUGGING... using the above "3rd Party middleware for Express"-> morgan example but making some tweeks...
+if (app.get('env') === 'development') {
     app.use(morgan('tiny'));
-    console.log('Morgan enabled...');
+    startupDebugger('Debugger enabled...');   // used along with morgan... 
 }
+// Db Work... Look above in require section... potentially somewhere in the app we might have DB work... 
+dbDebugger('Connected to the database...');
 
 
 // our data set array... 
