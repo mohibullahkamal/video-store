@@ -12,13 +12,31 @@ Each of these have different syntax for generating dynamic HTML and returning it
 I will work on Pug in this project... 
 
 lets see how to use 'pug' to generate a dynamic HTML and return it to Client... 
-
-`
+```
 npm i pug
-`
-we have to set the view engine in our index.js file... see the section for 'View Engine' in 'index.js'
+```
+we have to set the view engine in our index.js file... see the section for 'View Engine' in 'index.js'... with pug we can create 'index.pug' and write dynamic HTML... 
+
+You really don't need Template engine for creating REST services for Backend application... But for Frontend you do need.
+
+___
+### Database Integration:
+Details later... here we will touch the basics... 
+MongoDB and and mongoose(build on top of MongoDB).
+
+```
+npm install mongodb
+```
+Details will be done later...
+
+___
+### Authentication:
+Outside the scope of express... since express is a minimal, lightweight framework which is opinionated... Later we will go in details about Authentication and Authorization... 
+
+___
+### Structuring Express Application:
+for every API endpoint we are going to have a separate module... 
 
 ___
 
 
-___
