@@ -1,9 +1,6 @@
 const express = require('express');
 // const app = express();   // this don't work when you sepate the routes in a separate module... so here we need to use a router... 
-const router = express.Router();   // see explanation above as to why we are using a router...
-
-
-
+const router = express.Router();   // see explanation above as to why we are using a router... when you use express from different module then "express()" doesnot work... WE HAVE TO USE ROUTER... 
 
 
 // //************************************************************** */
@@ -19,7 +16,7 @@ const router = express.Router();   // see explanation above as to why we are usi
 // });
 
 // Now after setting the courses array above... lets get all courses...
-app.get('/api/courses', (req, res) => {
+router.get('/api/courses', (req, res) => {
     res.send(courses);
 });
 
@@ -27,7 +24,7 @@ app.get('/api/courses', (req, res) => {
 //************************************************************** */
 //************************************************************** */
 // lets now add PUT request... 3 Steps below...
-app.put('/api/courses/:id', (req, res) => {
+router.put('/api/courses/:id', (req, res) => {
     // Step 1. Look up the course
     // If not existing, return 404 ---> remember previous the get request where we parseInt to get data... Look above in GET request... 
     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
@@ -59,7 +56,7 @@ function validateCourse(course) {
 //************************************************************** */
 //************************************************************** */
 // DELETE request... in 3 steps... 
-app.delete('/api/courses/:id', (req, res) => {
+router.delete('/api/courses/:id', (req, res) => {
     // Step 1. Look up the course ---> seams like I have written this code above... CopyPaste...LOL
     // Not existing, return 404
     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
@@ -77,7 +74,7 @@ app.delete('/api/courses/:id', (req, res) => {
 // //************************************************************** */
 // //************************************************************** */
 // Lets now set id for courses to get... a bit complicated though... Naaa its easy... 
-app.get('/api/courses/:id', (req, res) => {
+router.get('/api/courses/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));   // look above what params.id does... set the following to 'const course'; and also parse the req info // courses.find is a method available to every JS array, it takes an argument... in order for the comparison to properly we are converting; as in parsing it...  
     if (!course) return res.status(404).send('The course with the given ID was not found... ');    // check for error... blablabla.send .... always have a .send
     res.send(course);    //else just send(course)
@@ -97,7 +94,7 @@ app.get('/api/courses/:id', (req, res) => {
 //************************************************************** */
 //************************************************************** */
 // we set input validator... copy of above... plus the input validator... 
-app.post('/api/courses', (req, res) => {
+router.post('/api/courses', (req, res) => {
     const { error } = validateCourse(req.body);   //stands for 'result.error' above ... Object destructuring used... 
     if (error) {   // never trust data sent from client... therefore use input validator...     // if (result.error) {   // never trust data sent from client... 
         return res.status(400).send(error.details[0].message);   // 400 Bad Request...
@@ -118,3 +115,6 @@ app.post('/api/courses', (req, res) => {
 //     };
 //     return Joi.validate(course, schema);   // This validate method returns an Object; lets store that in a const "result"... We give JOI req.body as well as the schema we declared... 
 // }
+
+
+module.exports = router;

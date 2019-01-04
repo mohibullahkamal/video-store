@@ -1,3 +1,4 @@
+const courses = require('./routes/courses');   // for structuring our express app, we are importing it from another module...
 const startupDebugger = require('debug')('app:startup');   // this require command returns a function, we call this function and give it an argument... this argument is an arbitrary namespace that we define for debugging... awesome... 
 const dbDebugger = require('debug')('app:db');   // we can have another debugger to debug database related messages... this will return a debugging function ... 
 const config = require('config');
@@ -30,6 +31,7 @@ app.use(express.static('public'));   // the last build-in middleware function we
 app.use(logger);   // custom middleware... see logger.js
 app.use(authenticator);   // custom middleware... see authenticator.js
 app.use(helmet());   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> Helmet helps you secure your Express apps by setting various HTTP headers.
+app.use('/api/courses', courses);   // we need to call app.use after importing 'courses.js'
 
 
 // CONFIGURATION ---> goes hand-in-hand with Environment... remember we used morgan('tiny')... to get env info... it basically change the display output to the config folder setup... for eg. when you change the env with "export NODE_ENV=development"
