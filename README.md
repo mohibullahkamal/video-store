@@ -42,7 +42,14 @@ for every API endpoint we are going to have a separate module...
 
 ___
 ### Asynchronous programming:
-Asynchronous programming is a non-blocking way of program execution.
+Asynchronous programming is a non-blocking way of program execution. The program doesnot wait for slow processes and therefore moves on to another line to execute it... 
+
+___
+### Async Patterns:
+
 
 ___
 
+
+
+___
