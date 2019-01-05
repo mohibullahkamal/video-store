@@ -42,7 +42,7 @@ for every API endpoint we are going to have a separate module...
 
 ___
 ### Asynchronous programming:
-
+Asynchronous programming is a non-blocking way of program execution.
 
 ___
 
