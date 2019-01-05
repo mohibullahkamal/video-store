@@ -31,7 +31,7 @@ app.use(express.static('public'));   // the last build-in middleware function we
 app.use(logger);   // custom middleware... see logger.js
 app.use(authenticator);   // custom middleware... see authenticator.js
 app.use(helmet());   // this is 3rd party middleware for Express... see how we using app.use...which is express call LOL... FUNCTION--> Helmet helps you secure your Express apps by setting various HTTP headers.
-app.use('/api/courses', courses);   // we need to call app.use after importing 'courses.js'
+app.use('i', courses);   // basically telling express that wherever you see this route -> /api/courses... to use courses.js router.... // we need to call app.use after importing 'courses.js'.... // here basically we are telling express that any routes that starts with /api/courses use this router... 
 
 
 // CONFIGURATION ---> goes hand-in-hand with Environment... remember we used morgan('tiny')... to get env info... it basically change the display output to the config folder setup... for eg. when you change the env with "export NODE_ENV=development"
