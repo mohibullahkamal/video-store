@@ -1,13 +1,26 @@
-
+// ****************************************************
+// ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
 // doing simulations... 
 console.log('Before....');
 getUser(1, (user) => {
     // Get the repositories... 
     getRepositories(user.gitHubUsername, (repos) => {
-        console.log('Repos are --> ', repos);
+        getCommit(repo, (commits) => {
+            // CALLBACK HELL (Christmas tree problem)... 
+
+        });
     });
 });
 console.log('After....');
+
+// // ****************************************************
+// // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
+// console.log('Before');
+// const user = getUser(1);
+// const repos = getRepositories(user.gitHubUsername);
+// const commits = getCommits(repos[0]);
+// console.log('After');
+
 
 // ****************************************************
 // ***************** ALL FUNCTIONS ********************

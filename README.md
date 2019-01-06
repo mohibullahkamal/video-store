@@ -55,7 +55,7 @@ Ok there are 3 design patterns to deal with Asynchronous code:
 
 ___
 ### 1. Callbacks (Async Pattern):
-callback is a function that we will call when the result of an Asynchronous operation is ready. 
+Callback is a function that we will call when the result of an Asynchronous operation is ready. 
 
-
+`Callback Hell` -> to resolve this issue we replace all anonymous functions into named functions... this way we can flatten the coding structure... 
 ___
