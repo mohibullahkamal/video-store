@@ -2,28 +2,24 @@
 // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
 // doing simulations... 
 console.log('Before....');
-getUser(1, (user) => {
-    // Get the repositories... 
-    getRepositories(user.gitHubUsername, (repos) => {
-        getCommit(repo, (commits) => {
-            // CALLBACK HELL (Christmas tree problem)... 
-
-        });
-    });
-});
+getUser(1, getRepositories);
 console.log('After....');
-
-// // ****************************************************
-// // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
-// console.log('Before');
-// const user = getUser(1);
-// const repos = getRepositories(user.gitHubUsername);
-// const commits = getCommits(repos[0]);
-// console.log('After');
 
 
 // ****************************************************
 // ***************** ALL FUNCTIONS ********************
+function getRepositories(user) {
+    getRepositories(user.gitHubUsername, getCommits);
+}
+
+function getCommits(repos) {
+    getCommits(repo, displayCommits);
+}
+
+function displayCommits(commits) {
+    console.log(commits);
+}
+
 function getUser(id, callback) {   // first of all we get data from database... we simulate a 2s lag... 
     setTimeout(() => {
         console.log('Reading a user from a database...');
@@ -37,4 +33,11 @@ function getRepositories(username, callback) {   // then after getUser() functio
         callback(['repo1', 'repo2', 'repo3']);
     }, 2000);
 }
-// *****************************************************
+
+// // ****************************************************
+// // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
+// console.log('Before');
+// const user = getUser(1);
+// const repos = getRepositories(user.gitHubUsername);
+// const commits = getCommits(repos[0]);
+// console.log('After');
