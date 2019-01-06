@@ -49,12 +49,12 @@ ___
 We create a function, in index.js file, in async-demo folder... 
 
 Ok there are 3 design patterns to deal with Asynchronous code:
-1. Callbacks - 
-2. Promises - 
+1. Callbacks
+2. Promises
 3. Async/await - basically a syntactical sugar over promises.
 
 ___
-
-
+### 1. Callbacks (Async Pattern):
+callback is a function that we will call when the result of an Asynchronous operation is ready. 
 
 ___
