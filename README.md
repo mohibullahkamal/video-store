@@ -53,17 +53,17 @@ Ok there are 3 design patterns to deal with Asynchronous code:
 2. Promises
 3. Async/await - basically a syntactical sugar over promises.
 
-### 1. Callbacks (Async Pattern):
+#### 1. Callbacks (Async Pattern):
 Callback is a function that we will call when the result of an Asynchronous operation is ready. 
 
 `Callback Hell` -> to resolve this issue we replace all anonymous functions into named functions... this way we can flatten the coding structure... 
 
 But there is a better way of dealing with asynchronous code... that's where `Promises` come in place...
 
-### 2. Promises:
+#### 2. Promises:
 
 
-### 3. Async/await:
+#### 3. Async/await:
 
 
 ___
