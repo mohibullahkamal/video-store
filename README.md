@@ -61,7 +61,7 @@ Callback is a function that we will call when the result of an Asynchronous oper
 But there is a better way of dealing with asynchronous code... that's where `Promises` come in place...
 
 #### 2. Promises:
-
+Holds the eventual result of an asynchronous operation. So basically when an async operation completes it could either result in a value or an error. A 'Promise' basically promises you that it will return the result of asynchronous operation.
 
 #### 3. Async/await:
 
