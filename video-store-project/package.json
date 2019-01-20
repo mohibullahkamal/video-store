@@ -1,0 +1,27 @@
+{
+  "name": "videostore-nodejs",
+  "version": "1.0.0",
+  "description": "Design Backend for online Video Store using NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohibullahkamal/videoStore-nodejs.git"
+  },
+  "keywords": [
+    "videostore"
+  ],
+  "author": "Mohibullah Kamal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohibullahkamal/videoStore-nodejs/issues"
+  },
+  "homepage": "https://github.com/mohibullahkamal/videoStore-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "nodemon": "^1.14.11"
+  }
+}
