@@ -1,5 +1,5 @@
-# node-project
-Sample project for practicing nodeJs
+# video-store
+Build my own video store using NodeJs in Backend.
 
 ___
 ## Templating Engine:
