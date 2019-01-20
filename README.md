@@ -55,22 +55,22 @@ ___
 ## Async Patterns:
 We create a function, in index.js file, in async-demo folder... 
 
-Ok there are 3 design patterns to deal with Asynchronous code:
-1. Callbacks
-2. Promises
-3. Async/await - basically a syntactical sugar over promises.
+Ok there are __3 Design Patterns__ to deal with Asynchronous code:
+1. `Callbacks`
+2. `Promises`
+3. `Async/await` - basically a syntactical sugar over promises.
 
-#### 1. Callbacks (Async Pattern):
+### 1. Callbacks (Async Pattern):
 Callback is a function that we will call when the result of an Asynchronous operation is ready. 
 
-`Callback Hell` -> to resolve this issue we replace all anonymous functions into "Named functions"... this way we can flatten the coding structure... 
+`Callback Hell` -> to resolve this issue we replace all anonymous functions into __"Named functions"...__ this way we can flatten the coding structure... 
 
-But there is a better way of dealing with asynchronous code... that's where `Promises` come in place...
+But there is a better way of dealing with asynchronous code... that's where __`Promises`__ come in place...
 
-#### 2. Promises:
+### 2. Promises:
 Extremely powerful when dealing with Asynchronous code. A "Promise" is an Object that holds the eventual result of an Asynchronous operation. So basically when an async operation completes it could either result in a value or an error. A 'Promise' basically promises you that it will return the result of asynchronous operation. It can be in three states... 
 1. Pending: pending state to fulfilled or Rejected state...
 
-#### 3. Async/await:
-Introduced with ES6/7. Simplifies callback and promises features...
+### 3. Async/await:
+Introduced with ES6/7. Simplifies callback and promises features a...
 ___
