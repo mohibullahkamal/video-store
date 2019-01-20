@@ -74,9 +74,13 @@ Extremely powerful when dealing with Asynchronous code. A "Promise" is an Object
 <img width="250" alt="screenshot 2019-01-20 at 15 54 19" src="https://user-images.githubusercontent.com/9574723/51440865-b6a95400-1ccb-11e9-976a-384558feb055.png">
 `promise` basically promises us that it will send us an value or an error... we have to define it in our code as to what goes where... we do this by `(resolve, reject)`... look into `promises.js` file.
 
+
 ![image](https://user-images.githubusercontent.com/9574723/51442551-3c35ff80-1cde-11e9-92be-027bc47c7837.png)
 
 The goal is to convert any `callback` to `promise`... lets see furthur... 
+
+![image](https://user-images.githubusercontent.com/9574723/51443027-c896f100-1ce3-11e9-9c9f-95949d7a8486.png)
+
 
 
 
