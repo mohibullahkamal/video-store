@@ -81,6 +81,8 @@ The goal is to convert any `callback` to `promise`... lets see furthur...
 
 ![image](https://user-images.githubusercontent.com/9574723/51443027-c896f100-1ce3-11e9-9c9f-95949d7a8486.png)
 
+Now lets work on `Consuming Promises` that we have changed... from callbacks to promises.
+
 
 
 

@@ -1,9 +1,35 @@
-// ****************************************************
-// ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
-// doing simulations... 
+
+// // ********************************************************************
+// // ** [Using callback approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
+// console.log('Before....');
+// getUser(1, (user) => {
+//     getRepositories(user.gitHubUsername, (repos) => {
+//         getCommits(repos[0], (commits) => {
+//             console.log(commits);
+//         })
+//     })
+// });
+// console.log('After....');
+
+
+// ********************************************************************
+// ** [Using callback approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
 console.log('Before....');
-getUser(1, getRepositories);
+getUser(1, (user) => {
+    getRepositories(user.gitHubUsername, (repos) => {
+        getCommits(repos[0], (commits) => {
+            console.log(commits);
+        })
+    })
+});
 console.log('After....');
+
+// // ****************************************************
+// // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
+// // doing simulations... 
+// console.log('Before....');
+// getUser(1, getRepositories);
+// console.log('After....');
 
 
 // *******************************************************************************
