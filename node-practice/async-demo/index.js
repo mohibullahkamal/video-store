@@ -12,24 +12,30 @@
 // console.log('After....');
 
 
+
 // ********************************************************************
-// ** [Using callback approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
+// ** [Using PROMISE approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
+
 console.log('Before....');
-getUser(1, (user) => {
-    getRepositories(user.gitHubUsername, (repos) => {
-        getCommits(repos[0], (commits) => {
-            console.log(commits);
-        })
-    })
-});
+
+getUser(1)
+    .then(user => getRepositories(user.gitHubUsername));
+    .then(repos => getCommits(repos[0]))
+    .then(commits => console.log('Commits are --> ', commits))
+    .catch(err => console.log('Error', err.message));
+
 console.log('After....');
+
+
 
 // // ****************************************************
 // // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
 // // doing simulations... 
+
 // console.log('Before....');
 // getUser(1, getRepositories);
 // console.log('After....');
+
 
 
 // *******************************************************************************
@@ -76,6 +82,7 @@ function getCommits(repo) {
 }
 
 
+
 // // ******************************************************************************************
 // // ******* ALL FUNCTIONS using callback functions as design pattern for async operations*****
 // function getRepositories(user) {
@@ -103,6 +110,8 @@ function getCommits(repo) {
 //         callback(['repo1', 'repo2', 'repo3']);
 //     }, 2000);
 // }
+
+
 
 // // ****************************************************
 // // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
