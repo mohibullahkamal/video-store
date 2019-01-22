@@ -89,3 +89,7 @@ Now lets work on `Consuming Promises` that we have changed... from callbacks to 
 ### 3. Async/await:
 Introduced with ES6/7. Simplifies callback and promises features...
 ___
+
+
+___
+
