@@ -1,7 +1,7 @@
 # video-store
 Build my own video store using NodeJs in Backend.
 
-This README file will basically document what technologies I learnt along the way in creating by very own online video store from scratch. I have to warn you though; this document will be technical and for those who are familiar with following technologies mentioned. However, casual readers will also find it interesting as I have tried my best to make it very understandable.
+This README file will basically document what technologies I learnt along the way in creating by very own online video store from scratch. I have to warn you though; this document will be technical and general familiarity with Web development is expected. However, non-technical readers will find it informative, as I have tried my best to make it understandable.
 
 I will first start with implementing the Backend using NodeJs. 
 
