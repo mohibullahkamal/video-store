@@ -84,6 +84,10 @@ The goal is to convert any `callback` to `promise`... lets see furthur...
 Now lets work on `Consuming Promises` that we have changed... from callbacks to promises.
 
 
+Lets now create a __'promise-api.js'__ file and make it such that it always passes tests, use (resolve); can be used for unit tests... 
+
+How about running __`parallel promises`__; we can run api calls from several sources...
+
 
 
 ### 3. Async/await:
