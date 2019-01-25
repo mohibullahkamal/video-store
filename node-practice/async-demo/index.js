@@ -1,18 +1,5 @@
 
-// // ********************************************************************
-// // ** [Using callback approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
-// console.log('Before....');
-// getUser(1, (user) => {
-//     getRepositories(user.gitHubUsername, (repos) => {
-//         getCommits(repos[0], (commits) => {
-//             console.log(commits);
-//         })
-//     })
-// });
-// console.log('After....');
-
-
-
+// ********************************************************************
 // ********************************************************************
 // ** [Using PROMISE approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
 
@@ -26,19 +13,6 @@ getUser(1)
 
 console.log('After....');
 
-
-
-// // ****************************************************
-// // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
-// // doing simulations... 
-
-// console.log('Before....');
-// getUser(1, getRepositories);
-// console.log('After....');
-
-
-
-// *******************************************************************************
 // **************** [Replacing all callback functions below] *********************
 // ***** ALL FUNCTIONS using Promises as Design Pattern for async operations *****
 function getRepositories(user) {
@@ -80,10 +54,24 @@ function getCommits(repo) {
         }, 2000);
     });
 }
+// ****************************************************
 
 
 
-// // ******************************************************************************************
+// // ********************************************************************
+// // ********************************************************************
+// // ** [Using callback approach] ASYNCHRONOUS VERSION [HARD, BETTER] ***
+// console.log('Before....');
+// getUser(1, (user) => {
+//     getRepositories(user.gitHubUsername, (repos) => {
+//         getCommits(repos[0], (commits) => {
+//             console.log(commits);
+//         })
+//     })
+// });
+// console.log('After....');
+
+
 // // ******* ALL FUNCTIONS using callback functions as design pattern for async operations*****
 // function getRepositories(user) {
 //     getRepositories(user.gitHubUsername, getCommits);
@@ -110,9 +98,22 @@ function getCommits(repo) {
 //         callback(['repo1', 'repo2', 'repo3']);
 //     }, 2000);
 // }
+// // ****************************************************
 
 
 
+// // ****************************************************
+// // ****************************************************
+// // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
+// // doing simulations... 
+
+// console.log('Before....');
+// getUser(1, getRepositories);
+// console.log('After....');
+
+
+
+// // ****************************************************
 // // ****************************************************
 // // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
 // console.log('Before');
@@ -120,3 +121,4 @@ function getCommits(repo) {
 // const repos = getRepositories(user.gitHubUsername);
 // const commits = getCommits(repos[0]);
 // console.log('After');
+// // ****************************************************
