@@ -11,6 +11,7 @@
 // ****************************************************************************************************
 
 
+
 // ****************************************************************************************************
 // ****************************************************************************************************
 // You might want to create two promises... eg. calling APIs from FB and Twitter at the same time... 
@@ -18,6 +19,7 @@ const p1 = new Promise((resolve) => {   // only resolve because I want file to o
     setTimeout(() => {
         console.log('Async operation 1 from Facebook...');
         resolve(1);
+        // reject(new Error('because something failed...'));   // remember to insert 'reject' keyword above in "new Promise((resolve, reject)....."
     }, 2000);
 });
 // lets duplicate the above code and assume it coming from Twitter Api...
@@ -31,6 +33,6 @@ const p2 = new Promise((resolve) => {   // only resolve because I want file to o
 // we give it an array of p1 and p2... it will return a promise when all promises within the given array has been resolved... 
 // another method that is available on the Promise class instead of promise object...
 Promise.all([p1, p2])
-    .then(result => console.log(result));
-
+    .then(result => console.log(result))
+    .catch(err => console.log('Error', err.message));
 // ****************************************************************************************************

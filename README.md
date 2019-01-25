@@ -86,7 +86,9 @@ Now lets work on `Consuming Promises` that we have changed... from callbacks to 
 
 Lets now create a __'promise-api.js'__ file and make it such that it always passes tests, use (resolve); can be used for unit tests... 
 
-How about running __`parallel promises`__; we can run api calls from several sources...
+How about running __`parallel promises`__; we can run api calls from several sources... How about inserting a 'reject' function... to see how it behaves...
+
+
 
 
 
