@@ -15,11 +15,11 @@
 // ****************************************************************************************************
 // ****************************************************************************************************
 // You might want to create two promises... eg. calling APIs from FB and Twitter at the same time... 
-const p1 = new Promise((resolve) => {   // only resolve because I want file to only pass... so I could use it for unit testing... 
+const p1 = new Promise((resolve, reject) => {   // only resolve because I want file to only pass... so I could use it for unit testing... 
     setTimeout(() => {
         console.log('Async operation 1 from Facebook...');
-        resolve(1);
-        // reject(new Error('because something failed...'));   // remember to insert 'reject' keyword above in "new Promise((resolve, reject)....."
+        // resolve(1);
+        reject(new Error('because something failed...'));
     }, 2000);
 });
 // lets duplicate the above code and assume it coming from Twitter Api...
