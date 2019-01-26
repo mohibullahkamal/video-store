@@ -88,6 +88,4 @@ The goal is to convert any `callback` to `promise`... lets see furthur...
 
 ### 3. Async/await:
 Introduced with ES6/7. Simplifies callback and promises features...
-
-
 ___
