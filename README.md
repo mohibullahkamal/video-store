@@ -9,6 +9,19 @@ ___
 
 # NodeJs:
 
+
+## Path Modules:
+Useful modules build within NodeJS.
+
+1. File System
+2. HTTP - create web services
+3. OS - work with Operating System
+4. Path - gives us utilities function to work with Path
+5. Process - gives information about current process
+6. Query Strings - useful in building HTTP services
+7. Stream - Allows us to work with streams of data
+
+___
 ## Templating Engine:
 In all endpoints we have implemented so far, we returned .json Objects in res. Sometimes however you need to return HTML or markup... to the client... thats where we use Templating engine... 
 
