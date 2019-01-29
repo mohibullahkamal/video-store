@@ -6,9 +6,7 @@ This README file will basically document what technologies I learnt along the wa
 I will first start with implementing the Backend using NodeJs. 
 
 ___
-
 # NodeJs:
-
 
 ## Path Modules:
 Useful modules build within NodeJS.
