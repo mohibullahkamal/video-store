@@ -101,23 +101,23 @@ function getCommits(repo) {
 
 
 
-// // ****************************************************
-// // ****************************************************
-// // ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
-// // doing simulations... 
+// ****************************************************
+// ****************************************************
+// ****** ASYNCHRONOUS VERSION [HARD, BETTER] *********
+// doing simulations... 
 
-// console.log('Before....');
-// getUser(1, getRepositories);
-// console.log('After....');
+console.log('Before....');
+getUser(1, getRepositories);
+console.log('After....');
 
 
 
-// // ****************************************************
-// // ****************************************************
-// // ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
-// console.log('Before');
-// const user = getUser(1);
-// const repos = getRepositories(user.gitHubUsername);
-// const commits = getCommits(repos[0]);
-// console.log('After');
-// // ****************************************************
+// ****************************************************
+// ****************************************************
+// ******* SYNCHRONOUS VERSION [EASY, NOT GOOD] *******
+console.log('Before');
+const user = getUser(1);
+const repos = getRepositories(user.gitHubUsername);
+const commits = getCommits(repos[0]);
+console.log('After');
+// ****************************************************
