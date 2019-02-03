@@ -102,23 +102,27 @@ The goal is to convert any `callback` to `promise`... lets see furthur...
 
 ### 3. Async/await:
 Introduced with ES6/7. Simplifies callback and promises features...
-___
-
-
-
-
-
-
 
 
 ___
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+___
+
 # Angular 2+ :
-Angular2+ is a Javascript framework for used for Frontend Web Development
+If we look back at history AngularJS(1), was launched in 2010 by Google, soon it gained popularity and Google developers started adding new features... Angular1 was NOT designed with today's applications in mind... Therefore Google Engineers came up with completely overhauled, improved version -> Angular2.
+
+Angular2+ is a Javascript framework for used for Frontend Web Development.
 
 __Getting started and Initial steps:__
-1. npm i @angular/cli   --> this downloads the 'angular cli' on your system.
-2. ng new hello-world   --> this command asks 'angular cli' to install all necessary packages for a normal project.
-3. 
+1. `npm i @angular/cli`   --> this downloads the 'angular cli' on your system.
+2. `ng new hello-world`   --> this command asks 'angular cli' to install all necessary packages for a normal project.
+3. `ng serve`   --> this will run the project. Output can be accessed through browser.
 
-create 
+
+
 
