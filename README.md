@@ -9,7 +9,7 @@ I will first start with implementing the Backend using NodeJs.
 
 ___
 # NodeJs:
-[<img height="50" alt="NodeJs" src="https://user-images.githubusercontent.com/9574723/52190488-bec2d100-283f-11e9-9cda-eb9217c4a5bc.png">]
+<img height="100" alt="NodeJs" src="https://user-images.githubusercontent.com/9574723/52190488-bec2d100-283f-11e9-9cda-eb9217c4a5bc.png">
 
 ## Path Modules:
 Useful modules build within NodeJS.
@@ -110,10 +110,30 @@ ___
 ********************************************************************************
 ********************************************************************************
 ___
+# TypeScript:
+1. __Type Assertions_
+- Used for activating IntelliSense in VS code.
+![image](https://user-images.githubusercontent.com/9574723/52190203-0b0d1180-283e-11e9-8404-7df690b047c7.png)
 
+- Alternative way, rarely used...
+![image](https://user-images.githubusercontent.com/9574723/52190318-c59d1400-283e-11e9-8de9-4114e1f9d958.png)
+
+2. __Interfaces__
+- build custom properties.
+![image](https://user-images.githubusercontent.com/9574723/52191759-9e4a4500-2846-11e9-89e7-92044ab6decd.png)
+
+3. 
+
+
+
+
+
+
+
+__
 # Angular 2+ :
 
-[<img height="50" alt="Angular" src="https://user-images.githubusercontent.com/9574723/52190529-fd588b80-283f-11e9-9d8c-84cd62a94432.png">]
+<img height="100" alt="Angular" src="https://user-images.githubusercontent.com/9574723/52190529-fd588b80-283f-11e9-9d8c-84cd62a94432.png">
 
 If we look back at history AngularJS(1), was launched in 2010 by Google, soon it gained popularity and Google developers started adding new features... Angular1 was NOT designed with today's applications in mind... Therefore Google Engineers came up with completely overhauled, improved version -> Angular2.
 
@@ -134,16 +154,18 @@ __Some useful commands:__
 2. ``   --> 
 3. ``   --> 
 
+### Sections in Angular:
+- `Components`   --> it encapsulates the 'Data', 'HTML Template', and 'Logic' for a VIEW. Basicallly the area of screen the user views. It furthur be divived into `Modules` where every Angular app has an `App Module`. This basically sorts all different `Components` into specified `Module`. If the App is too big, there will be several `Modules`.
+__Creating a `Component`:__
+1. Create a component.
+2. Register it in a module.
+3. Add an element in an `HTML markup`.
+
+- Templates   --> 
+- Directives
+- Services
+
+
 __
-## TypeScript:
-1. __Type Assertions__
-- Used for activating IntelliSense in VS code.
-![image](https://user-images.githubusercontent.com/9574723/52190203-0b0d1180-283e-11e9-8404-7df690b047c7.png)
 
-- Alternative way, rarely used...
-![image](https://user-images.githubusercontent.com/9574723/52190318-c59d1400-283e-11e9-8de9-4114e1f9d958.png)
-
-2. 
-
-__
 
