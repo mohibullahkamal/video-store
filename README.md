@@ -9,6 +9,7 @@ I will first start with implementing the Backend using NodeJs.
 
 ___
 # NodeJs:
+[<img height="50" alt="NodeJs" src="https://user-images.githubusercontent.com/9574723/52190488-bec2d100-283f-11e9-9cda-eb9217c4a5bc.png">]
 
 ## Path Modules:
 Useful modules build within NodeJS.
@@ -111,6 +112,9 @@ ___
 ___
 
 # Angular 2+ :
+
+[<img height="50" alt="Angular" src="https://user-images.githubusercontent.com/9574723/52190529-fd588b80-283f-11e9-9d8c-84cd62a94432.png">]
+
 If we look back at history AngularJS(1), was launched in 2010 by Google, soon it gained popularity and Google developers started adding new features... Angular1 was NOT designed with today's applications in mind... Therefore Google Engineers came up with completely overhauled, improved version -> Angular2.
 
 Angular(2+) is a Javascript framework written in Typescript(Ts), used for Frontend Web Development.
