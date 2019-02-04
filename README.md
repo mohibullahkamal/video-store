@@ -125,4 +125,21 @@ __Getting started and Initial steps:__
 
 Webpack has a feature called Hot Module Replacement (HMR) which automatically reloads the apps. This helps users save time on having to refresh App every time after saving work.
 
+__Some useful commands:__
+1. `tsc main.ts | node main.js`   --> run both typescript and node together.
+2. ``   --> 
+3. ``   --> 
+
+__
+## TypeScript:
+1. __Type Assertions__
+- Used for activating IntelliSense in VS code.
+![image](https://user-images.githubusercontent.com/9574723/52190203-0b0d1180-283e-11e9-8404-7df690b047c7.png)
+
+- Alternative way, rarely used...
+![image](https://user-images.githubusercontent.com/9574723/52190318-c59d1400-283e-11e9-8de9-4114e1f9d958.png)
+
+2. 
+
+__
 
