@@ -108,9 +108,6 @@ ___
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************
-********************************************************************************
-********************************************************************************
-********************************************************************************
 ___
 
 # Angular 2+ :
@@ -122,9 +119,9 @@ __Getting started and Initial steps:__
 1. `npm i @angular/cli`   --> this downloads the 'angular cli' on your system.
 2. `ng new hello-world`   --> this command asks 'angular cli' to install all necessary packages for a normal project.
 3. `ng serve`   --> this will run the project. Output can be accessed through browser.
-4. npm install typescript   --> install typescript.
-5. tsc -v   --> check typescript version.
-6. tsc main.ts   --> compiles the TS code (main.ts) to JS code.
+4. `npm install typescript`  --> install typescript.
+5. `tsc -v`   --> check typescript version.
+6. `tsc main.ts`   --> compiles the TS code (main.ts) to JS code.
 
 Webpack has a feature called Hot Module Replacement (HMR) which automatically reloads the apps. This helps users save time on having to refresh App every time after saving work.
 
