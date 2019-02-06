@@ -156,15 +156,18 @@ __Some useful commands:__
 3. ``   --> 
 
 ### Sections in Angular:
-- `Components`   --> it encapsulates the 'Data', 'HTML Template', and 'Logic' for a VIEW. Basicallly the area of screen the user views. It furthur be divived into `Modules` where every Angular app has an `App Module`. This basically sorts all different `Components` into specified `Module`. If the App is too big, there will be several `Modules`.
+1. `Components`   --> it encapsulates the 'Data', 'HTML Template', and 'Logic' for a VIEW. Basicallly the area of screen the user views. It furthur be divived into `Modules` where every Angular app has an `App Module`. This basically sorts all different `Components` into specified `Module`. If the App is too big, there will be several `Modules`.
 __Creating a `Component`:__
-1. `Create` a `component`.
-2. `Register` it in a `module`.
-3. `Add` an `element` in an `HTML markup`.
+a. `Create` a `component`.
+b. `Register` it in a `module`.
+c. `Add` an `element` in an `HTML markup`.
 
-- `Templates`   --> 
-- `Directives`   -->
-- `Services`   -->
+How to create a `Component` to display a list of courses?
+- Angular convention suggests to create file in `src->app->courses.component.ts`
+
+2. `Templates`   --> 
+3. `Directives`   -->
+4. `Services`   -->
 
 
 ___
