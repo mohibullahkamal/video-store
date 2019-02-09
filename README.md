@@ -152,7 +152,7 @@ Webpack has a feature called Hot Module Replacement (HMR) which automatically re
 
 __Some useful commands:__
 1. `tsc main.ts | node main.js`   --> run both typescript and node together.
-2. ``   --> 
+2. `ng g c course`   --> use `angular cli` to generate new component; `g` -> generate, `c` -> component.
 3. ``   --> 
 
 ### Sections in Angular:
