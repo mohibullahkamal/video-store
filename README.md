@@ -1,11 +1,11 @@
 ### ***This project is under development, therefore not complete.
 
 # video-store
-..... Build my own Web-based Video Store using NodeJs in Backend.
+..... Build my own Web-based Video Store using `Angular` in Frontend and `NodeJs` in Backend.
 
 This README file will basically document what technologies I learnt along the way in creating by very own online video store from scratch. I have to warn you though; this document will be technical and general familiarity with Web development is expected. However, non-technical readers will find it informative, as I have tried my best to make it understandable.
 
-I will first start with implementing the Backend using NodeJs. 
+I will __first start__ with implementing the Backend using `NodeJs`. In parallel, I will be work on the Frontend using `Angular`.
 
 ___
 # NodeJs:
