@@ -127,7 +127,6 @@ ___
 3. 
 
 
-
 ___
 ********************************************************************************
 ********************************************************************************
@@ -166,8 +165,10 @@ How to create a `Component` to display a list of courses?
 - Angular convention suggests to create file in `src->app->courses.component.ts`
 
 2. `Templates`   --> 
-3. `Directives`   -->
-4. `Services`   -->
+
+3. `Directives`   --> We use `Angular built-in directives` to manipulate the `DOM`. We use directives to `Add`, `Remove`, `Change ID or CLASS`, or `Change Style` of an existing `DOM` element.
+
+4. `Services`   --> 
 
 
 ___
