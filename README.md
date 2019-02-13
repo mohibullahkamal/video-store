@@ -155,7 +155,7 @@ __Some useful commands:__
 3. ``   --> 
 
 ### Sections in Angular:
-1. `Components`   --> it encapsulates the 'Data', 'HTML Template', and 'Logic' for a VIEW. Basicallly the area of screen the user views. It furthur be divived into `Modules` where every Angular app has an `App Module`. This basically sorts all different `Components` into specified `Module`. If the App is too big, there will be several `Modules`.
+1. __Components__   --> it encapsulates the 'Data', 'HTML Template', and 'Logic' for a VIEW. Basicallly the area of screen the user views. It furthur be divived into _Modules_ where every Angular app has an _App Module_. This basically sorts all different _Components_ into specified _Module_. If the App is too big, there will be several _Modules_.
 __Creating a `Component`:__
 a. `Create` a `component`.
 b. `Register` it in a `module`.
@@ -164,11 +164,11 @@ c. `Add` an `element` in an `HTML markup`.
 How to create a `Component` to display a list of courses?
 - Angular convention suggests to create file in `src->app->courses.component.ts`
 
-2. `Templates`   --> 
+2. __Templates__   --> 
 
-3. `Directives`   --> We use `Angular built-in directives` to manipulate the `DOM`. We use directives to `Add`, `Remove`, `Change ID or CLASS`, or `Change Style` of an existing `DOM` element.
+3. __Directives__   --> We use _Angular built-in directives_ to manipulate the _DOM_. We use directives to _Add_, _Remove_, _Change ID or CLASS_, or _Change Style_ of an existing _DOM_ element.
 
-4. `Services`   --> 
+4. __Services__   --> 
 
 
 ___
