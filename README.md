@@ -168,6 +168,9 @@ How to create a `Component` to display a list of courses?
 
 3. __Directives__   --> We use _Angular built-in directives_ to manipulate the _DOM_. We use directives to _Add_, _Remove_, _Change ID or CLASS_, or _Change Style_ of an existing _DOM_ element.
 
+![image](https://user-images.githubusercontent.com/9574723/52789740-011cb700-3065-11e9-8680-e928a82aba96.png)
+
+
 4. __Services__   --> 
 
 
