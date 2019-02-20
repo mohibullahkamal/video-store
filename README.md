@@ -121,8 +121,6 @@ ___
 ![image](https://user-images.githubusercontent.com/9574723/52190318-c59d1400-283e-11e9-8de9-4114e1f9d958.png)
 
 2. __Interfaces__
-- build custom properties.
-![image](https://user-images.githubusercontent.com/9574723/52191759-9e4a4500-2846-11e9-89e7-92044ab6decd.png)
 
 3. 
 
