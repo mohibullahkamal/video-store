@@ -9,8 +9,3 @@ export class AppComponent {
   title = 'My first Angular App';
 }
 
-let myNum = 10;
-function print() {
-
-  console.log(myNum);
-}
