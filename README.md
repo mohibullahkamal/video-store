@@ -111,14 +111,7 @@ ___
 ___
 # TypeScript:
 
-<img height="100" alt="TypeScript" src="https://user-images.githubusercontent.com/9574723/52193483-a195fe80-284f-11e9-8043-a130849674f7.png">
 
-1. __Type Assertions__
-- Used for activating IntelliSense in VS code.
-![image](https://user-images.githubusercontent.com/9574723/52190203-0b0d1180-283e-11e9-8404-7df690b047c7.png)
-
-- Alternative way, rarely used...
-![image](https://user-images.githubusercontent.com/9574723/52190318-c59d1400-283e-11e9-8de9-4114e1f9d958.png)
 
 2. __Interfaces__
 - build custom properties.
