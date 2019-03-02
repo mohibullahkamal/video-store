@@ -162,7 +162,7 @@ b. `Register` it in a `module`.
 c. `Add` an `element` in an `HTML markup`.
 
 How to create a `Component` to display a list of courses?
-- Angular convention suggests to create file in `src->app->courses.component.ts`
+--> Angular convention suggests to create file in `src->app->courses.component.ts`
 
 2. __Templates__   --> 
 
