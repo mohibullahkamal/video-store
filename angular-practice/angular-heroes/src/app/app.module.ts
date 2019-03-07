@@ -5,15 +5,11 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 
 import { FormsModule } from '@angular/forms';
-import { VehicleComponent } from './vehicle/vehicle.component';
-import { PowersComponent } from './powers/powers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    VehicleComponent,
-    PowersComponent
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
