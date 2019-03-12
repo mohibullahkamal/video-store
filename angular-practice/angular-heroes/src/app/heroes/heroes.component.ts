@@ -9,7 +9,7 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  hero = HEROES;
+  selectedHero = HEROES;
 
   constructor() { }
 
