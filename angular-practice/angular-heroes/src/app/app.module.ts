@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
-import { VehicleComponent } from './vehicle/vehicle.component'; // <-- NgModel lives here
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccessoriesComponent } from './accessories/accessories.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    VehicleComponent
+    VehicleComponent,
+    AccessoriesComponent
   ],
   imports: [
     BrowserModule,
