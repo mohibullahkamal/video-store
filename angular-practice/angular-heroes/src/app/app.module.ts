@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
 import { PaintComponent } from './paint/paint.component';
-import { MileageComponent } from './mileage/mileage.component'; // <-- NgModel lives here
+import { MileageComponent } from './mileage/mileage.component';
+import { TiresComponent } from './tires/tires.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MileageComponent } from './mileage/mileage.component'; // <-- NgModel l
     VehicleComponent,
     AccessoriesComponent,
     PaintComponent,
-    MileageComponent
+    MileageComponent,
+    TiresComponent
   ],
   imports: [
     BrowserModule,
