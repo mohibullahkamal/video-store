@@ -8,7 +8,8 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
 import { PaintComponent } from './paint/paint.component';
 import { MileageComponent } from './mileage/mileage.component';
-import { TiresComponent } from './tires/tires.component'; // <-- NgModel lives here
+import { TiresComponent } from './tires/tires.component';
+import { PassengerComponent } from './passenger/passenger.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TiresComponent } from './tires/tires.component'; // <-- NgModel lives h
     AccessoriesComponent,
     PaintComponent,
     MileageComponent,
-    TiresComponent
+    TiresComponent,
+    PassengerComponent
   ],
   imports: [
     BrowserModule,
