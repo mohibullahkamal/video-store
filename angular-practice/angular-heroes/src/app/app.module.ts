@@ -9,7 +9,8 @@ import { AccessoriesComponent } from './accessories/accessories.component';
 import { PaintComponent } from './paint/paint.component';
 import { MileageComponent } from './mileage/mileage.component';
 import { TiresComponent } from './tires/tires.component';
-import { PassengerComponent } from './passenger/passenger.component'; // <-- NgModel lives here
+import { PassengerComponent } from './passenger/passenger.component';
+import { RentDateComponent } from './rent-date/rent-date.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PassengerComponent } from './passenger/passenger.component'; // <-- NgM
     PaintComponent,
     MileageComponent,
     TiresComponent,
-    PassengerComponent
+    PassengerComponent,
+    RentDateComponent
   ],
   imports: [
     BrowserModule,
