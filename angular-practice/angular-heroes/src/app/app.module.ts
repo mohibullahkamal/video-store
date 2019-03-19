@@ -10,7 +10,8 @@ import { PaintComponent } from './paint/paint.component';
 import { MileageComponent } from './mileage/mileage.component';
 import { TiresComponent } from './tires/tires.component';
 import { PassengerComponent } from './passenger/passenger.component';
-import { RentDateComponent } from './rent-date/rent-date.component'; // <-- NgModel lives here
+import { RentDateComponent } from './rent-date/rent-date.component';
+import { TestDriveComponent } from './test-drive/test-drive.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RentDateComponent } from './rent-date/rent-date.component'; // <-- NgMo
     MileageComponent,
     TiresComponent,
     PassengerComponent,
-    RentDateComponent
+    RentDateComponent,
+    TestDriveComponent
   ],
   imports: [
     BrowserModule,
