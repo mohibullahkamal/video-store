@@ -11,7 +11,8 @@ import { MileageComponent } from './mileage/mileage.component';
 import { TiresComponent } from './tires/tires.component';
 import { PassengerComponent } from './passenger/passenger.component';
 import { RentDateComponent } from './rent-date/rent-date.component';
-import { TestDriveComponent } from './test-drive/test-drive.component'; // <-- NgModel lives here
+import { TestDriveComponent } from './test-drive/test-drive.component';
+import { DriverDetailsComponent } from './driver-details/driver-details.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TestDriveComponent } from './test-drive/test-drive.component'; // <-- N
     TiresComponent,
     PassengerComponent,
     RentDateComponent,
-    TestDriveComponent
+    TestDriveComponent,
+    DriverDetailsComponent
   ],
   imports: [
     BrowserModule,
