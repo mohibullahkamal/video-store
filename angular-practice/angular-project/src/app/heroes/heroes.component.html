@@ -1,7 +1,10 @@
 
 
 <h2>{{ abc.name | uppercase }} Details</h2>
-<div><span>id: </span>{{ abc.id }}</div>
-<div><span>name: </span>{{ abc.name }}</div>
 
-<h3>{{ xyz }} </h3>
+<div>
+  <label>name: 
+    <input [(ngModel)]="abc.name" placeholder="name" />
+  </label>
+</div>
+
