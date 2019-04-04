@@ -5,19 +5,20 @@
   </li>
 </ul>
 
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div>
+    <span>id: </span>{{selectedHero.id}}
+  </div>
 
-<h2>{{ selectedX.name | uppercase }} Details</h2>
-<div><span>id: </span>{{selectedX.id}}</div>
-<div>
-  <label>name: 
-    <input [(ngModel)]="selectedX.name" placeholder="name" />
-  </label>
+  <div>
+    <label>name: 
+      <input [(ngModel)]="selectedHero.name" placeholder="name" />
+    </label>
+  </div>
 </div>
 
-<!-- <br>
-<br>
-
-<h2>{{ xyz }} -> this is awesome!!</h2>
+<!-- <h2>{{ xyz }} -> this is awesome!!</h2>
 <div>
   <label>name: 
     <input [(ngModel)]="xyz" placeholder="name" />
