@@ -1,14 +1,4 @@
 
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let x of heroes" 
-    [class.selected]="x === selectedHero"
-    (click)="onSelect(x)">
-    <span class="badge">{{x.id}}</span> {{x.name}}
-  </li>
-</ul>
-
-
 <div *ngIf="selectedHero">
 
   <h2>{{selectedHero.name | uppercase}} Details</h2>
@@ -23,3 +13,15 @@
   </div>
 
 </div>
+
+
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let x of heroes" 
+    [class.selected]="x === selectedHero"
+    (click)="onSelect(x)">
+    <span class="badge">{{x.id}}</span> {{x.name}}
+  </li>
+</ul>
+
