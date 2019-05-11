@@ -4,14 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { NowrinComponent } from './nowrin/nowrin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    NowrinComponent
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
