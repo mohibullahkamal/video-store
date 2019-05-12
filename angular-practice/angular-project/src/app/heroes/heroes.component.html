@@ -1,13 +1,3 @@
-<!-- Hero titles --> 
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let x of heroes" 
-    [class.selected]="x === selectedHero"
-    (click)="onSelect(x)">
-    <span class="badge">{{x.id}}</span> {{x.name}}
-  </li>
-</ul>
-
 <!-- Descriptions -->
 <div *ngIf="selectedHero">
 
@@ -23,3 +13,15 @@
   </div>
 
 </div>
+
+
+<!-- Hero titles --> 
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let x of heroes" 
+    [class.selected]="x === selectedHero"
+    (click)="onSelect(x)">
+    <span class="badge">{{x.id}}</span> {{x.name}}
+  </li>
+</ul>
+
