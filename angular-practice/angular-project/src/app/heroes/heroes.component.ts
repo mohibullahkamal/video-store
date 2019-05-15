@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  hero = 'Windstorm';
-  var1 = 'this is var one';
-  var2 = 'this is var two';
+  hero: Hero = {
+    id: 1, 
+    name: 'Windstorm'
+  };
 
   constructor() { }
 
