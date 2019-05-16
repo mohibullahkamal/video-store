@@ -11,11 +11,6 @@ export class HeroesComponent implements OnInit {
 
   monkeys = HEROES;
 
-  selectedHero: Hero;
-  onSelect(z: Hero): void {
-    this.selectedHero = z;
-  }
-
   //hero: Hero = { id: 1, name: 'Windstorm' };
   constructor() {  }
 
