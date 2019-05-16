@@ -8,9 +8,9 @@ import { Hero } from '../hero';
 })
 export class HeroDetailComponent implements OnInit {
 
-  selectedHero: Hero;
+  hero: Hero;
   onSelect(z: Hero): void {
-    this.selectedHero = z;
+    this.hero = z;
   }
 
   constructor() { }
