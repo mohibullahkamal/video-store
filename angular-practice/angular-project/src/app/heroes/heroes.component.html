@@ -1,12 +1,13 @@
-
 <h2>My Heroes: </h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <span class="badge">{{hero.id}}</span>{{hero.name}}
+  <li *ngFor="let x of monkeys" 
+      [class.selected]="x === selectedHero"
+      (click)="onSelect(x)">
+    <span class="badge">{{x.id}}</span>{{x.name}}
   </li>
 </ul>
 
-<!-- 
+<!-- Details template -->
 <div *ngIf="selectedHero">
 
   <h2>{{selectedHero.name | uppercase}} Details</h2>
@@ -18,4 +19,4 @@
     </label>
   </div>
    
-</div> -->
+</div>
