@@ -1,4 +1,5 @@
 <h2>My Heroes: </h2>
+
 <ul class="heroes">
   <li *ngFor="let x of monkeys" 
       [class.selected]="x === selectedHero"
@@ -6,3 +7,5 @@
     <span class="badge">{{x.id}}</span>{{x.name}}
   </li>
 </ul>
+
+<app-hero-detail [x]="selectedHero"></app-hero-detail>
