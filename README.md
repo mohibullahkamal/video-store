@@ -1,8 +1,5 @@
 ### ***This project is under development, therefore not complete.
 
-# Electron Project
-first commit
-
 # video-store
 ..... Build my own Web-based Video Store using `Angular` in Frontend and `NodeJs` in Backend.
 
