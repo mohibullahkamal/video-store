@@ -170,8 +170,6 @@ How to create a `Component` to display a list of courses?
 ![image](https://user-images.githubusercontent.com/9574723/52789740-011cb700-3065-11e9-8680-e928a82aba96.png)
 
 
-4. __Services__   --> 
-
 ___
 
 
