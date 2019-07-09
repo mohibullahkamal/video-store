@@ -6,4 +6,7 @@ export class Hero {
     street: string;
     city: string;
     country: string;
+    job: string;
+    married: boolean;
+    children: number;
 }
