@@ -7,6 +7,4 @@ export class Hero {
     city: string;
     country: string;
     job: string;
-    married: boolean;
-    children: number;
 }
