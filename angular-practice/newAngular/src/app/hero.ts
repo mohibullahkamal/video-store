@@ -6,4 +6,6 @@ export class Hero {
     street: number;
     city: string;
     land: string;
+    weight: number;
+    height: number;
 }
