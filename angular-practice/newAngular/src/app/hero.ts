@@ -8,4 +8,6 @@ export class Hero {
     land: string;
     weight: number;
     height: number;
+    subject: string;
+    school: string;
 }
