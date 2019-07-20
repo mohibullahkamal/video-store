@@ -6,7 +6,5 @@ export class Hero {
     street: number, 
     city: string, 
     land: string, 
-    school: string, 
-    course: string, 
-    beginYear: string,
+
 }
