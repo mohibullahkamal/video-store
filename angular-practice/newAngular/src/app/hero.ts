@@ -3,7 +3,4 @@ export class Hero {
     name: string,
     email: string, 
     phone: number, 
-    city: string,
-    street: string,
-    country: string,
 }
