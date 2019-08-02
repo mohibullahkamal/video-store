@@ -19,4 +19,5 @@ import { HeroesComponent } from './heroes/heroes.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
