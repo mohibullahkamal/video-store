@@ -7,4 +7,7 @@ export const HEROES:Hero[] = [
     {id: 14, name: 'Wes'},
     {id: 15, name: 'Andreau'},
     {id: 16, name: 'James'},
+    {id: 14, name: 'Robert'},
+    {id: 15, name: 'Brown'},
+    {id: 16, name: 'Jill'},
 ];
