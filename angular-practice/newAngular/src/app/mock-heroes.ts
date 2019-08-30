@@ -44,4 +44,6 @@ export const HEROES:Hero[] = [
     {id: 39, name: 'Jelly'},
     {id: 40, name: 'Arij'},
     {id: 41, name: 'Coco'},
+    {id: 42, name: 'Suraj'},
+    {id: 43, name: 'Mina'},
 ];
